@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Analisador léxico</title>
-    <script src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src="./jquery-3.2.1.min.js"></script>
     <link rel="stylesheet" type="text/css" href="./styles.css"/>
     <link rel="shortcut icon" type="text/css" href="./assets/epsilon-dark.png"/>
 </head>
@@ -16,30 +16,36 @@
     <main>
         <div class="div-main flex">
             <div class="areas flex">
-                <div>
+                <div class="flex">
                     <h2>Dicionário</h2>
                     <div>
-                        <input type="text">
-                        <button>Adicionar palavra</button>
+                        <input type="text" placeholder="Digite uma palavra nova...">
+                        <button onclick="addNewWord()">Adicionar</button>
                     </div>
-                    <textarea>
-
-                    </textarea>
+                    <textarea oncontextmenu="return false;" disabled placeholder="(Palavras possíveis)"></textarea>
                 </div>
-                <div>
+                <div class="flex">
                     <h2>Validador</h2>
-                    <textarea>
-                        
-                    </textarea>
+                    <textarea autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
+                    placeholder="Digite o texto a ser validado aqui" oncontextmenu="return false;"></textarea>
                 </div>
             </div>
             <div class="maping flex">
-
+                <h2>Automato finito</h2>
+                    <table class="tautomaton-table">
+                        <thead class="tautomaton-head">
+                            <tr id="tr-header" class="tautomaton-tr">
+                                <!-- Header builded by constructorTable function -->
+                            </tr>
+                        </thead>
+                        <tbody class="tautomaton-body">
+                            <tr id="q0" class="tautomaton-tr ">
+                                <!-- Default line builded by constructorTable function -->
+                            </tr>
+                        </tbody>
+                    </table>
             </div>
-            
         </div>
-
-        
     </main>
     <script src="./index.js"></script>
 </body>

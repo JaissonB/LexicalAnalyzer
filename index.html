@@ -14,15 +14,15 @@
         <h1>Analisador léxico</h1>
     </header>
     <main>
-        <div class="div-main flex">
+        <div class="div-main">
             <div class="areas flex">
                 <div class="flex">
                     <h2>Dicionário</h2>
-                    <div>
-                        <input type="text" placeholder="Digite uma palavra nova...">
-                        <button onclick="addNewWord()">Adicionar</button>
-                    </div>
-                    <textarea oncontextmenu="return false;" disabled placeholder="(Palavras possíveis)"></textarea>
+                    <form id="form-add-word">
+                        <input id="input-add-word" type="text" placeholder="Digite uma palavra nova...">
+                        <button type="submit">Adicionar</button>
+                    </form>
+                    <textarea id="textarea-dictionary" oncontextmenu="return false;" disabled placeholder="(Palavras possíveis)"></textarea>
                 </div>
                 <div class="flex">
                     <h2>Validador</h2>
@@ -32,6 +32,7 @@
             </div>
             <div class="maping flex">
                 <h2>Automato finito</h2>
+                <div class="maping-table">
                     <table class="tautomaton-table">
                         <thead class="tautomaton-head">
                             <tr id="tr-header" class="tautomaton-tr">
@@ -44,6 +45,7 @@
                             </tr>
                         </tbody>
                     </table>
+                </div>
             </div>
         </div>
     </main>
